@@ -1,0 +1,15 @@
+:root {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    --body-font-size: 1.125rem;
+    --v-dark-grey:  hsl(0, 0%, 17%);
+    --dark-grey: hsl(0, 0%, 59%);
+}
+
+
+
+
+@media only screen and (min-width: 480px) {
+    
+}
