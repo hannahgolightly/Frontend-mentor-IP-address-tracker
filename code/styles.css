@@ -1,15 +1,102 @@
 :root {
-    margin: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    --body-font: 'Rubik', sans-serif;
     --body-font-size: 1.125rem;
+    --sm-font: 0.75rem;
+    --lg-font: 1.2rem;
     --v-dark-grey:  hsl(0, 0%, 17%);
     --dark-grey: hsl(0, 0%, 59%);
+    --shadow-color: 0deg 0% 35%;
+    --shadow-elevation-medium:
+      0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+      0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+      2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+      5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    text-align: center;
+    height: 100vh;
+}
+
+h1 {
+    color: #FFF;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: var(--sm-font);
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+    color: var(--dark-grey);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: var(--v-dark-grey);
+    font-size: var(--body-font-size);
+    font-weight: 500;
+    margin-top: 0.5rem;
+    margin-bottom: 1.4rem;
 }
 
 
+.background-design {
+    max-height: 40vh;
+    background-image: url("images/pattern-bg.png");
+    background-size: cover;
+}
 
+form {
+    margin: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    height: 3.5rem;
+    width: auto;
+}
+
+
+button {
+    background-color: #000;
+    height: 100%;
+    outline: none;
+    border: none;
+    width: 4rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+input {
+    border: none;
+    border-radius: 1rem 0 0 1rem;
+    outline: none;
+    font-size: 0.8rem;
+    font-family: var(--body-font);
+    width: 100%;
+    padding-left: 1rem;
+}
+
+.results {
+    background-color: #FFF;
+    padding: 0.5rem 0.5rem 0.1rem 0.5rem;
+    border-radius: 1rem;
+    margin: 1.25rem;
+    box-shadow: var(--shadow-elevation-medium);
+
+}
 
 @media only screen and (min-width: 480px) {
+    input {
+        font-size: var(--body-font-size);
+    }
+
+    .results {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        text-align: left;
+        padding: 1rem;
+    }
     
 }
